@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- OTHER NEEDED INFO LINKS-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Technical Documentation Page for WEKA</title>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <nav id="navbar" class="navbar">
+    <header style="color: white;"> WEKA Documentation</header>
+    <ul id="navlinks">
+      <li><a class="nav-link" href="#introduction">Introduction to WEKA</a></li>
+      <li><a class="nav-link" href="#getstarted">Getting Started with WEKA</a></li>
+      <li><a class="nav-link" href="#exploringexplorer">Exploring The Explorer</a></li>
+      <li><a class="nav-link" href="#exploringdatasets">Exploring Datasets</a></li>
+      <li><a class="nav-link" href="#classifiers">Building a classifier</a></li>
+      <li><a class="nav-link" href="#filters">Using a Filter</a></li>
+      <li><a class="nav-link" href="#visualizing">Visualizing Your Data</a></li>
+      <li><a class="nav-link" href="#moreinfovid">More Information</a></li>
+      <li><a class="nav-link" href="#reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header>Introduction to WEKA</header>
+      <article>
+        <p>Weka is tried and tested open source machine learning software that can be accessed through a graphical user interface, standard terminal applications, or a Java API. It is widely used for teaching, research, and industrial applications, contains a plethora of built-in tools for standard machine learning tasks, and additionally gives transparent access to well-known toolboxes such as scikit-learn, R, and Deeplearning4j.</p>
+        <p>
+          WEKA is a Data mining workbench that stands for <strong>Waikato Environment for Knowledge Analysis</strong>. 
+        </p>
+        <p>
+          There are many uses for WEKA for data mining purposes and processes. Examples of these include <strong>Machine learning algorithms for data mining tasks such as:</strong>
+        </p>
+        <ul>
+          <li>100+ algorithms for classification </li>
+          <li>75 for data preprocessing </li>
+          <li>25 to assist with feature selection </li>
+          <li>20 for clustering, finding association rules, etc </li>
+        </ul>
+        <p>
+          With the many possibilities that WEKA offers to its users, these include the variety of functionalities. A list of things you can learn through WEKA is listed below:
+        </p>
+        <ul>
+          <li>Load data into Weka and look at it</li>
+          <li>Use filters to preprocess it </li>
+          <li>Explore it using interactive visualization </li>
+          <li>Apply classification algorithms</li>
+          <li>Interpret the output </li>
+          <li>Understand evaluation methods and their implications </li>
+          <li>Understand various representations for models </li>
+          <li>Explain how popular machine learning algorithms work </li>
+          <li>Be aware of common pitfalls with data mining </li>
+          <li>Use Weka on your own data.... and many more!</li>
+        </ul>
+        <p><strong>
+          Summary Diagram of what WEKA has to offer:
+        </strong></p>
+        <img src="https://www.tutorialspoint.com/weka/images/weka_summarized.jpg" alt="Summary Diagram of WEKA" class="imgdiagram">
+      </article>
+    </section>
+    <section class="main-section" id="getstarted">
+      <header>Getting Started with WEKA</header>
+      <article>
+        <p>Before starting with all the many possible machine learning opportunities WEKA has to offer, we must first install the application</p>
+        <p><strong>Here is a link to download the software</strong></p>
+        <code class="downloadlink"><a href="https://waikato.github.io/weka-wiki/downloading_weka/"style="color:white;">Click here to download WEKA</a></code>
+        <ul>
+          <li>
+            WEKA offers platform downloads for different operating systems
+          </li>
+          <li>There is a choice to download between the stable version (more common to use) and developer version (much more intensive)</li>
+          <li>
+            There is also a choice to download old versions of the software.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="exploringexplorer">
+      <header>Exploring The Explorer</header>
+      <article>
+        <p>
+         For this part, we will explore the explorer interface of WEKA. As you can see, there are many functionalities pointed at the top navigation part. But for this part, we will focus on the preprocess tab pointed in the photo below.
+       </p>
+       <img src="img/1.jpg" alt="Photo representation for WEKA" class="imgdiagram">
+       <p>
+        Just like your common datasets, WEKA represents data in terms of rows and columns. Attributes describe the instances or the data objects in the data sets. Instances on the other hand represent the attributes as these are data objects within the given data set. Attached below is a photo for representation.
+      </p>
+      <img src="img/2.jpg" alt="Photo representation for WEKA" class="imgdiagram">
+      <p>
+        For this part, lets try opening a predefined dataset included in WEKA's database. Lets open the file <strong>weather.nominal.arff</strong> by clicking the open file button on the top left side in the preprocess tab. Locate the file in the folder "data".
+        After opening the file, we can see how the data in the weather.nominal dataset is represented in an organized manner including a graphic representation for each attribute and attribute value.
+      </p>
+      <img src="img/3.jpg" alt="Photo representation for WEKA" class="imgdiagram">
+    </article>
+  </section>
+
+  <section class="main-section" id="exploringdatasets">
+    <header>Exploring Datasets</header>
+    <article>
+     <p> WEKA has a lot of predefined datasets included when we installed the software. These different datasets allow us to explore and understand how each dataset can be represented and edited to produce desired results. An screenshot of two datasets from the predefined datasets includes the <strong>weather.numeric dataset and glass dataset.</strong></p>
+     <p style="display:flex;">
+      <img src="img/4.jpg" alt="Photo representation for WEKA" class="imgdiagram" >
+      <img src="img/5.jpg" alt="Photo representation for WEKA" class="imgdiagram" >
+    </p>
+  </article>
+</section>
+<section class="main-section" id="classifiers">
+  <header>Building a Classifier</header>
+  <p>
+    For this part, we will understand how to build a classifier by using <strong>J48 to analyze the glass.arff dataset</strong>
+  </p>
+  <p>
+    For this part, go to the <strong>classify</strong> tab right beside the preprocess tab. From there on, choose the available classifiers by clicking <strong>choose > classifiers > trees > J48</strong>
+  </p>
+  <img src="img/6.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 700px;height: 600px" >
+  <p>
+    After doing so, click the start button and examine the output. Take a close look at the correctly classified instances (the percentage for each instance) and the confusion matrix on where errors might occur during the classification phase.
+  </p>
+  <img src="img/7.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 700px;height: 600px" >
+</section>
+
+<section class="main-section" id="filters">
+  <header>Using a Filter</header>
+  <article>
+    WEKA has powerful functionalities that includes using filters. With filters, you can easily filter out data to have a better, cleaner, or more relevant dataset as it can remove missing data, bad characters, outliers, and the like.
+    <p>
+      Let's open the <strong>weather.nominal.arff dataset</strong> again. Filters have two main categories for filters namely,  <code>unsupervised and supervised filters</code>
+      <strong>Supervised Filters</strong> consider the class value, while <strong>unsupervised filters</strong> don't.  For example, the unsupervised discretize filter only considers the attribute being discretized. While it can 'optimize' the number of bins, it does so only with respect to self encoding. However, the supervised <strong>discretize</strong> filter will break the attribute into bins that provide the most information about the class.  
+    </p>
+    <p>
+      Using filters let's us also filter out between <code>attributes and instances</code>
+      Recall in the previous sections that <strong>attributes</strong> describe data objects/instances. Hence, they are somewhat like the "header" for a data column. On the other hand, <strong>instances</strong> are the data objects in the data set. Instances represent the attributes.  
+    </p>
+    <p>
+      Using the <strong>unsupervised attribute filter Remove</strong>, lets look at our weather.nominal dataset. Click <strong>more information</strong> and look at the attributes. Set the <strong>attributeIndices</strong> to <strong>3</strong> and hit the OK button and apply the filter.
+    </p>
+    <p style="display:flex;">
+      <img src="img/8.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 600px;height: 600px">
+      <img src="img/9.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 600px;height: 600px" >
+    </p>
+    <p>
+      As a result, look at the two photos below, the attribute with the index <strong>3</strong> which was <strong>humidity</strong> is now removed from the dataset. 
+    </p>
+    <p style="display:flex;">
+      <img src="img/10.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 600px;height: 600px">
+      <img src="img/11.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 600px;height: 600px" >
+    </p>
+    <p>
+      Click the <strong>UNDO</strong> button to bring back the original dataset. 
+    </p>
+  </article>
+</section>
+
+
+<section class="main-section" id="visualizing">
+  <header>Visualizing Your Data</header>
+  <article>
+    <p>
+      For this part, we are going to use the <strong>iris.arff</strong> dataset. Open the dataset and go to the <strong>visualize</strong> tab in the far right side next to the select attributes tab
+    </p>
+    <img src="img/12.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 600px;height: 600px" >
+    <p>
+    As you can see, there are numerous ways on how to graphically represent our data using WEKA. If you click one of the representations, you are presented with a graph. You can customize these "plots" by color or by what these plots represent. If you click each individual plot, it shows the information that the plot represents in the data. The <strong>Jitter</strong> function allows you to disperse the plots in order to see other plots that are close to each other/ overlap one another. 
+    </p>
+     <p style="display:flex;">
+      <img src="img/13.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 600px;height: 600px">
+      <img src="img/14.jpg" alt="Photo representation for WEKA" class="imgdiagram" style="width: 600px;height: 600px" >
+    </p>
+    <p style="font-size: 20px">
+    <strong><i>Now with the basic information represented in the following sections, it is up to you to play around and discover the many functionalities that WEKA has to offer when it comes to  data mining and machine learning! Have fun with WEKA!</i></strong>
+    </p>
+
+ <section id="moreinfovid video-area">
+  <header>More Informational Videos</header>
+        <div class="container">
+            <div class="video-wrapper">
+                <iframe
+                id="video" 
+                src="https://www.youtube.com/embed/owWhcmI5hx0" 
+                frameborder="0" 
+                allowfullscreen></iframe>
+            </div>
+        </div>      
+    </section>
+
+
+<section class="main-section" id="reference">
+  <header>Reference</header>
+  <article>
+    <ul>
+      <li>
+        The summary diagram and introduction is referenced from
+        <a href="https://www.tutorialspoint.com/weka/what_is_weka.html " target="_blank" style="color: white;">this site</a>
+      </li>
+      <li>
+        All other information is referenced from
+        <a href="https://www.cs.waikato.ac.nz/ml/weka/mooc/dataminingwithweka/ " target="_blank" style="color: white;">here</a> in the official WEKA MOOC website
+      </li>
+
+    </ul>
+  </article>
+</section>
+</main>
+</body>
+
+</html>
